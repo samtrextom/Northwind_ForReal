@@ -1,0 +1,122 @@
+﻿body {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+nav {
+    background-image: linear-gradient(#325663, #29454F 60%, #314F5A );
+}
+
+.indexHeader {
+    background-image: url(/indexPics/northWindsJumboTron.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%, 60%;
+
+}
+
+.indexHeader h1 {
+    color: #29454F;
+}
+
+.btn-outline-primary {
+    color: #29454F;
+    border-color: #29454F;
+}
+
+.btn:hover {
+    background-color: #29454F;
+    border-color: #29454F;
+}
+
+.card-container {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.card-body {
+    background-color: #F3FFFA;
+}
+
+.card-body h5 {
+    color: #29454F;
+}
+
+.card-body .btn-primary {
+    background-image: linear-gradient(#325663, #29454F 60%, #314F5A );
+    border-color: #29454F;
+}
+
+.card-body .btn-primary:hover {
+    color: #c5fffa;
+    border-color: #c5fffa;
+}
+
+.pnIcon {
+    background-image: url(/FooterIcon/youtube.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%, 60%;
+}
+
+.fbIcon {
+    background-image: url(/FooterIcon/facebook.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%, 60%;
+}
+
+.twIcon {
+    background-image: url(/FooterIcon/twitter.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%, 60%;
+}
+
+.igIcon {
+    background-image: url(/FooterIcon/ins.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%, 60%;
+}
+
+.footerPhoneNumber {
+    margin-top: 1em;
+    margin-bottom: 0em;
+    float: left;
+}
+
+.footerContactLink {
+    float: left;
+}
+
+.footerMain {
+    padding-top: 2em;
+}
+
+.footBot {
+    margin-left:auto;
+    margin-right:auto;
+    align-content:center;
+    font-size: .8em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+footer {
+    margin-top: 5em;
+    display: block;
+    color: #c5fffa;
+    background-color: #29454F;
+}
+
+    footer h5 {
+        text-align: left;
+    }
+
+.socialMediaIcons div {
+    width: 60px;
+    height: 60px;
+    display: table-cell;
+    text-align: left;
+}
+

@@ -1,0 +1,178 @@
+﻿<div class="jumbotron my-2 indexHeader">
+    <div class="toast toastDiscount animated heartBeat" role="alert" data-autohide="false" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 100px; right: 20%;">
+        <div class="toast-header">
+            <img src="~/indexPics/toastFern.jpg" class="rounded mr-2" alt="...">
+            <strong class="mr-auto discount-item" style="width:150px"></strong>
+            <small class="text-muted discount-expire"></small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body discount-code"></div>
+    </div>
+    <h1 class="display-4">Northwind</h1>
+    <p class="lead">We have the best prices and selection of high quality foods &amp; beverages on the planet! Check out our featured discounts below.</p>
+    <hr class="my-4">
+    <p>For exceptional international quisuine, look no further.</p>
+    <a class="btn btn-outline-primary btn-lg" href="#" role="button"><i class="fas fa-shopping-cart"></i> Order Now</a>
+</div>
+<div class="container-fluid card-container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card indexCard" style="border-radius: 5px;box-shadow: 10px 10px 8px #888888;">
+                <img src="/indexPics/northwindsDiscounts.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Hot Discounts!</h5>
+                    <p class="card-text">Check out our featured discounts on dozens of the best food products anywhere.</p>
+                    <a href="#" class="btn btn-primary">View Discounts</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card indexCard" style="border-radius: 5px;box-shadow: 10px 10px 8px #888888;">
+                <img src="/indexPics/northwindsSignUp.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sign Up Today!</h5>
+                    <p class="card-text">To get high quality food and beverage delivered right to your door.</p>
+                    <a href="#" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card indexCard" style="border-radius: 5px;box-shadow: 10px 10px 8px #888888;">
+                <img src="/indexPics/northwindsSuppliers.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Top Rated Suppliers</h5>
+                    <p class="card-text">Best suppliers of quality foods and beverage. See where we are getting our food.</p>
+                    <a href="#" class="btn btn-primary">View Our Suppliers</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="animateDiv container" style="background-color:#c2d6d6; border-radius:5em ">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="form col-md-6" style="padding-top:1em">
+            <div role="alert" aria-live="assertive" aria-atomic="true" class="toast toastBalloon" data-autohide="false" style="background-color:#ff9999; position:absolute; top:25em;">
+                <div class="toast-header">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong class="mr-auto">Warning</strong>
+                    <small>Missing Data</small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">
+                    YOU HAVE NO BALLLOONS SELECTED!!!
+                </div>
+            </div>
+            <h1 class="balloonHeader" style="text-align:center">Pick Balloons</h1>
+
+            <div style="margin-left:25%; margin-right:25%">
+                <div class="form-group form-check " id="#0066ff" style="display:inline-block">
+                    <input type="checkbox" class="form-check-input" id="blueBalloon" />
+                    <label class="form-check-label"> Blue Balloon</label>
+                </div>
+                <div class="form-group form-check " id="#00e6ac" style="display:inline-block">
+                    <input type="checkbox" class="form-check-input" id="blue_greenBalloon" />
+                    <label class="form-check-label" >Teal Balloon</label>
+                </div>
+                <div class="form-group form-check" id="#00ff00" style="display:inline-block">
+                    <input type="checkbox" class="form-check-input" id="greenBalloon" />
+                    <label class="form-check-label" >Green Balloon</label>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-outline-dark balloonAll">Select All</button>
+                    <button type="button" class="btn btn-outline-dark balloonNone">Select None</button>
+                </div>
+                <button type="button" class="btn btn-outline-dark balloonSubmit">Submit</button>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-md-6 balloonDiv">
+            <img src="~/indexPics/blue.png" id="blueBalloonImg" />
+            <img src="~/indexPics/blue_green.png" id="blue_greenBalloonImg" />
+            <img src="~/indexPics/green.png" id="greenBalloonImg" />
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
+
+
+   
+    @section Scripts {
+        <script>
+
+            var animateStyles = ['rotateIn', 'flip', 'fadeIn', 'lightSpeedIn', 'rollIn', 'jackInTheBox'];
+
+            var min = 0;
+            var max = animateStyles.length - 1;
+
+            var randomAnimate = Math.round(Math.random() * (max - min) + min);
+
+            $('.animateDiv').addClass('animated ' + animateStyles[randomAnimate]);
+            $('.toastDiscount').toast('show');
+            $('.toastBalloon').toast('hide');
+
+            $('.form-check').on('mouseenter', function (e) {
+                $('.balloonHeader').css('color', this.id);
+            })
+
+            $('.form-check').on('mouseleave', function (e) {
+                $('.balloonHeader').css('color', '#29454F');
+            })
+
+            $(".toast").data("discount", { dItem: "Item #12", dExpire: "10/31/2019", dCode: "Discount Code: ITEM12" });
+            $(".discount-item").text($(".toast").data("discount").dItem);
+            $(".discount-expire").text($(".toast").data("discount").dExpire);
+            $(".discount-code").text($(".toast").data("discount").dCode);
+
+            $(document).on('keyup', function(e) {
+                if (e.key === "Escape") {
+                    $('.toastDiscount').toast('hide');
+                    $('.toastBalloon').toast('hide');
+                }
+            });
+
+            $(function () {
+                $('.form-check-input').each(function () {
+                    $(this).prop('checked', true);
+                });
+
+                $('.form-check-input').on('change', function () {
+                    $('#' + this.id + "Img").css('visibility', 'visible')
+
+                    $(this).is(':checked') ?
+                        $('#' + this.id + 'Img').removeClass().addClass('animated bounceInDown') :
+                        $('#' + this.id + 'Img').addClass('animated bounceOutDown')
+                });
+            });
+
+            $(".balloonAll").on('click', function (e) {
+                $('.form input:checkbox').prop('checked', true);
+                $('.form input:checkbox').is(':checked') ?
+                        $('.balloonDiv img').removeClass().addClass('animated bounceInDown') :
+                        $('.balloonDiv img').addClass('animated bounceOutDown')
+            });
+
+            $(".balloonNone").on('click', function (e) {
+                $('.form input:checkbox').prop('checked', false);
+                $('.form input:checkbox').is(':checked') ?
+                        $('.balloonDiv img').removeClass().addClass('animated bounceInDown') :
+                        $('.balloonDiv img').addClass('animated bounceOutDown')
+            });
+
+            $(".balloonSubmit").on('click', function (e) {
+               
+                if ($('.form input:checkbox:checked').length == 0) {
+                    $('.toastBalloon').toast('show');
+                }
+
+            });
+
+        </script>
+    }
