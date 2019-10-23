@@ -107,9 +107,13 @@ footer {
     display: block;
     color: #c5fffa;
     background-color: #29454F;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align:center;
 }
 
-    footer h5 {
+footer h5 {
         text-align: left;
     }
 

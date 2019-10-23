@@ -1,0 +1,15 @@
+﻿@using Northwind.Models
+@model  IEnumerable<AppUser>
+
+<table>
+    <tr><th>ID</th><th>Name</th><th>Email</th></tr>
+    @if (!Model.Any())
+    {
+        <tr><td>No User Account</td></tr>
+    }
+    else
+    { @foreach (AppUser user in Model)
+    {<tr><td>@user.Id</td><td>@user.UserName</td><td>@user.Email</td></tr>}}
+</table>
+
+<a class="btn btn-primary" asp-action="Create">Create</a>
